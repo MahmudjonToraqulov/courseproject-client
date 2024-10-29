@@ -1,31 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css'; // Import Tailwind CSS
-import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import {store} from './store/index';
+import './utils/language'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import App from './App';
-import Home from './pages/Home'
-import Login from './pages/Login';
-import Register from './pages/Register';
-import UserManagement from './pages/UserMAnagement';
-import QuestionForms from './pages/QuestionForms';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 root.render(
-  <React.StrictMode>
-    <Router>
+  <Provider store={store}>
       <App />
-      <br />
-      <br />
-      <br />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/question-forms" element={<QuestionForms />} />
-        <Route path="/user-management" element={<UserManagement />} />
-      </Routes>
-    </Router>
-  </React.StrictMode>
-);
+  </Provider>,
+)

@@ -1,9 +1,18 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit'
 
-const rootReducer = combineReducers({
-    user: userReducer,
+import  UsersSlice  from './slices/user.slice'
+import  FormSlice  from './slices/form.slice'
+import  FilledFormSlice  from './slices/filledForm.slice'
+import  CommentSlice  from './slices/comment.slice'
+import  AuthSlice  from './slices/auth.slice'
+
+
+export const store = configureStore({
+    reducer: {
+        auth: AuthSlice,
+        users: UsersSlice,
+        forms: FormSlice,
+        filledForms: FilledFormSlice,
+        comments: CommentSlice
+    },
 })
-
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
