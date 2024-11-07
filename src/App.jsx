@@ -28,6 +28,9 @@ import EditFillForm from "./components/edit-fill-form";
 import HandleFilledFormsAdmin from "./components/handle-filled-forms-admin";
 import FilledFormPage from "./components/filled-form-page/index.jsx";
 import HandleCommentsAdmin from "./components/handle-comments-admin";
+import JiraPage from "./components/Jira/index.jsx";
+import GenerateToken from "./components/odoo-token-generator/index.jsx";
+
 
 
 const protectedRoutes = (userRole)=>(
@@ -39,6 +42,8 @@ const protectedRoutes = (userRole)=>(
         <Route path="/fill-form/:id" element={<FillForm />} />
         <Route path="/edit-filled-form" element={<EditFillForm />} />                   
         <Route path="/filled-form-page" element={<FilledFormPage/>} />                   
+        <Route path="/jira" element={<JiraPage />} />                   
+        <Route path="/token" element={<GenerateToken />} />                   
         {userRole==='admin' && 
           <>
             <Route path="/admin" element={<AdminPage />} />

@@ -35,7 +35,7 @@ const EditFilledFormsBlock = ({handleGetFilledForms}) => {
     if (loading) return <Loading/>
 
     return (
-        <div className='p-3 pt-90'>
+        <div className='pt-90 p-3 my-4'>
             <h1 className='text-main'>{t('usersAnswers')}</h1>
             <div className=''>
                 {

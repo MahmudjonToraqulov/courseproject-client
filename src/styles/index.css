@@ -34,7 +34,14 @@
     --moz-primary-box-shadow: 1px 0px 14px 0px rgba(34, 60, 80, 0.22);
     --primary-box-shadow: 1px 0px 14px 0px rgba(34, 60, 80, 0.22);
 
+    --box-background-tag-btn-color: #0fffbf;
+
+    --nav-active-link-color: #5ec7ff!important;
+
     --user-me-theme: #efeaea;
+
+    --jira-primary-bg-theme: #7091E6;
+    --jira-primary-color-theme: white;
 
     --input-placeholder-color: #7091E6;
     --text-btn-light: rgb(230, 230, 239)!important;
@@ -50,7 +57,7 @@
     --primary-text-color: #bcc4fe;
     --secondary-text-color:#050A44;
   
-    --primary-border-color:#4b4c53;
+    --primary-border-color:#496dff;
   
     --button-solid-background-color:#091d9f;
     --button-solid-text-color:#fff;
@@ -68,7 +75,14 @@
     --moz-primary-box-shadow: 1px 0px 14px 0px #6679ee;
     --primary-box-shadow: 1px 0px 14px 0px #6071de;
 
+    --box-background-tag-btn-color: #0fffbf;
+
+    --nav-active-link-color: #5ec7ff!important;
+
     --user-me-theme: #1b2985;
+
+    --jira-primary-bg-theme: #3c56ff;
+    --jira-primary-color-theme: white;
 
     --primary-border-color:#4b4c53;
     --box-background-color: rgb(49, 45, 91);
@@ -105,7 +119,12 @@
     --moz-primary-box-shadow: 1px 0px 14px 0px rgb(198, 100, 215);
     --primary-box-shadow: 1px 0px 14px 0px rgb(198, 100, 215);
 
+    --box-background-tag-btn-color: #0fffbf;
+
     --user-me-theme: #6e0086;
+
+    --jira-primary-bg-theme: #d209ff;
+    --jira-primary-color-theme: white;
 
     --primary-border-color:#6e0086;
     --box-background-color: rgb(52, 12, 64);
@@ -114,6 +133,14 @@
 
     --input-placeholder-color: #d000ff;
 
+  }
+
+  nav > a{
+    text-transform: uppercase;
+  }
+
+  nav > a.text-primary{
+    color: var(--nav-active-link-color)!important;
   }
 
   .theme-options{
@@ -263,4 +290,74 @@ body{
 }
 .text-btn-light{
     color: var(--text-btn-light);
+}
+.ql-toolbar {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .ql-container {
+    min-height: 200px;
+  }
+  
+  .ql-editor {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* .ql-editor h1 {
+    color: #007bff;
+  }
+  
+  .ql-editor h2 {
+    color: #28a745;
+  } */
+  
+  .ql-editor a {
+    color: #ff5733;
+    text-decoration: underline;
+  }
+  
+  .ql-editor a:hover {
+    color: #c70039;
+  }
+  #react-tags-listbox{
+    background-color: var(--box-background-color-2);
+    padding: 8px;
+    margin: 8px;
+    color: var(--primary-text-color);
+  }
+#react-tags-listbox div{
+    padding: 4px;
+    cursor: pointer;
+}
+#react-tags-listbox div:hover{
+    background-color: var(--box-background-tag-btn-color);
+    padding: 4px;
+}
+#react-tags > ul{
+    list-style: none;
+    display: flex;
+}
+#react-tags > ul > li > button{
+    background-color: var(--box-background-tag-btn-color);
+    border: none;
+    margin: 4px;
+    padding: 4px 8px; 
+    color: #054f3c;
+    border-radius: 3px;
+}
+#react-tags-input{
+    padding: 4px;
+}
+.jira-btn{
+  background-color: var(--jira-primary-bg-theme);
+  color: var(--jira-primary-color-theme);
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 24px!important;
+  padding: 8px 20px;
+  border-radius: 10px;
 }

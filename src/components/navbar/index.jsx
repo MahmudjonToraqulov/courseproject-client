@@ -1,13 +1,12 @@
 import React from 'react';
-
-import { Outlet} from "react-router-dom";
+import { Link, Outlet} from "react-router-dom";
 import {useTranslation} from "react-i18next";
-
 import NavMenu from "./NavMenu.jsx";
+import {useSelector} from "react-redux";
 
 const Header = () => {
-
     const {t} = useTranslation()
+    const user = useSelector(state=>state.auth.user)
 
     return (
         <div className=''>
@@ -15,6 +14,9 @@ const Header = () => {
                 <NavMenu/>
             </header>
             <Outlet  />
+            {
+                user ? <Link className='jira-btn' to='jira'>Jira</Link> : null
+            }
         </div>
 
     );

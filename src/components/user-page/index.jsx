@@ -7,19 +7,25 @@ import EditFormsBlock from '../edit-forms-block/index.jsx';
 import { getFormsByUserId } from '../../store/slices/form.slice.js';
 import { getFilledFormsByUserId } from '../../store/slices/filledForm.slice.js';
 import { useTranslation } from 'react-i18next';
+import Salesforce from '../salesforce/index.jsx';
 
 const UserPage = () => {
-
+    const [openSalesforce, setOpenSalesforce] = useState(false)
     const {t} = useTranslation()
     const dispatch = useDispatch()
 
-    const userId = useSelector(state => state.auth.user.id)
+    const user = useSelector(state => state.auth.user)
 
-    const handleGetFormsByUserId = ()=>{
-        dispatch(getFormsByUserId(userId))
+    const handleGetFormsByUserId = () => {
+        dispatch(getFormsByUserId(user.id))
     }
-    const handleGetFilledFormsByUserId = ()=>{
-        dispatch(getFilledFormsByUserId(userId))
+
+    const handleGetFilledFormsByUserId = () => {
+        dispatch(getFilledFormsByUserId(user.id))
+    }
+
+    const handleOpenSalesforce = () => {
+        setOpenSalesforce(true)
     }
 
     useEffect(() => {
@@ -38,22 +44,40 @@ const UserPage = () => {
     }
 
     return (
-        <div className='pt-90 p-4'>
-            <div className='mt-4'>
-                <button
-                    onClick={handleChooseForms}
-                    className={'btn ' + (chosenTab === "forms" ? "btn-main" : "")}>{t('forms')}
-                </button>
-                <button
-                    onClick={handleChooseFilled}
-                    className={'btn ' + (chosenTab === "filled" ? "btn-main" : "")}>{t('filledForms')}
-                </button>
+        <div className='pt-90 p-4 mt-3'>
+            <div className=''>
+                <div>
+                    <button
+                        onClick={handleChooseForms}
+                        className={'btn m-1 ' + (chosenTab === "forms" ? "btn-primary " : " btn-main")}>{t('forms')}
+                    </button>
+                    <button
+                        onClick={handleChooseFilled}
+                        className={'btn m-1 ' + (chosenTab === "filled" ? "btn-primary " : " btn-main")}>{t('filledForms')}
+                    </button>
+                </div>
             </div>
             {
                 chosenTab === 'forms' ?
-                    <EditFormsBlock handleGetFormsByUserId={handleGetFormsByUserId}/>
+                <EditFormsBlock handleGetFormsByUserId={handleGetFormsByUserId}/>
+                :
+                <EditFilledFormsBlock handleGetFilledForms={handleGetFilledFormsByUserId}/>
+            }
+            {
+                !user?.salesforceid
+                    ?
+                    <button onClick={handleOpenSalesforce} className='btn btn-main'>Salesforce</button>
                     :
-                    <EditFilledFormsBlock handleGetFilledForms={handleGetFilledFormsByUserId}/>
+                    null
+            }
+            {
+                openSalesforce
+                    ?
+                    <Salesforce
+                        setOpenSalesforce={setOpenSalesforce}
+                    />
+                    :
+                    null
             }
         </div>
     );

@@ -55,7 +55,7 @@ const FormMainFields = ({form, setForm, image, setImage}) => {
                 <p className='text-main fs-4'>{t('topic')}</p>
                 <select
                     value={form.topicId}
-                    className='input'
+                    className='p-2'
                     onChange={(e) => handleChangeTopic(e)}>
                     {
                         topics.map(topic => (
@@ -70,6 +70,7 @@ const FormMainFields = ({form, setForm, image, setImage}) => {
             <div className='mb-4'>
                 <p className='text-main fs-4'>{t('tags')}</p>
                 <TagAutocomplete
+                    className='p-3'
                     form={form}
                     setForm={setForm}
                 />

@@ -10,7 +10,7 @@ const FormCommentItem = ({comment, admin = false, deleteComment = null}) => {
     const author = comment.user.id===comment.form.userId
 
     return (
-        <div className="">
+        <div className="box-bg-theme my-4 box-shadow">
             <div
                 className={"p-3 rounded my-3 shadow box-bg-theme-2"+ (author&&!admin?"":"bg-white")}>
                 <div className="">
@@ -26,18 +26,18 @@ const FormCommentItem = ({comment, admin = false, deleteComment = null}) => {
                         )}
 
                     </div>
-                    {admin && (
-                        <button
-                            onClick={() => deleteComment(comment.id)}
-                            className=""
-                        >
-                            {t('delete')}
-                        </button>
-                    )}
                 </div>
                 <p className="">
                     {comment.comment}
                 </p>
+                    {admin && (
+                        <button
+                            onClick={() => deleteComment(comment.id)}
+                            className="btn btn-danger"
+                        >
+                            {t('delete')}
+                        </button>
+                    )}
             </div>
         </div>
 

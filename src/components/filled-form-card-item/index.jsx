@@ -20,8 +20,8 @@ const FilledFormCardItem = ({form, handleEdit, handleDelete}) => {
     if (!form.form) return
     return (
         <div
-            className="box-bg-theme p-3">
-            <button onClick={handleNavigate} className="border-none bg-none text-main fs-4 font-bold rounded">{form.form.title}</button>
+            className="box-bg-theme p-3 my-3 box-shadow">
+            <button onClick={handleNavigate} className="border-none bg-none text-primary fs-4 font-bold rounded">{form.form.title}</button>
             <p className="">{t('filledBy')}: {form.user.name}</p>
             <p className="">
                 {t('filledOn')}: {getDate(form.createdAt)}

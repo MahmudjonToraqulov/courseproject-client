@@ -32,7 +32,7 @@ const EditFormsBlock = ({handleGetFormsByUserId}) => {
     if (!forms) return
 
     return (
-        <div className='pt-90 p-4'>
+        <div className='p-4'>
             <h1 className='text-main'>{t('myForms')}</h1>
             <div className=''>
                 {

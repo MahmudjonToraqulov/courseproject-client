@@ -42,7 +42,7 @@ const HandleCommentsAdmin = () => {
                 {comments.map(comment => {
                     return (
                         <div
-                            className='col-span-1'
+                            className=''
                             key={comment.id}
                         >
                             <FormCommentItem

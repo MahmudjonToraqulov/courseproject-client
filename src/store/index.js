@@ -5,7 +5,7 @@ import  FormSlice  from './slices/form.slice'
 import  FilledFormSlice  from './slices/filledForm.slice'
 import  CommentSlice  from './slices/comment.slice'
 import  AuthSlice  from './slices/auth.slice'
-
+import JiraSlice  from './slices/jira.slice'
 
 export const store = configureStore({
     reducer: {
@@ -13,6 +13,7 @@ export const store = configureStore({
         users: UsersSlice,
         forms: FormSlice,
         filledForms: FilledFormSlice,
-        comments: CommentSlice
+        comments: CommentSlice,
+        jira: JiraSlice,
     },
 })

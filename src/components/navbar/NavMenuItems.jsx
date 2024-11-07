@@ -27,7 +27,7 @@ const NavMenuItems = () => {
                 return (
                     <Link
                         key={navItem.label}
-                        className={'text-main text-lg mx-2 fs-4 text-decoration-none cursor-pointer text-capitalize' + (pathname === navItem.url ? 'text-primary' : '')}
+                        className={'text-main text-lg mx-2 fs-4 text-decoration-none cursor-pointer text-capitalize' + (pathname === navItem.url ? ' text-primary' : '')}
                         to={navItem.url}>
                         {navItem.label}
                     </Link>

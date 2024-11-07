@@ -142,7 +142,27 @@ export const en = {
         isInUse: 'is already in use',
         minTwoOptions: 'Please add at least two options',
         yes: 'yes',
-        no: 'no'
+        no: 'no',
+        nameRequired: 'Name is required',
+        emailRequired: 'Email is required',
+        notValidPhone: 'Not valid phone',
+        salesforceIntegration: 'Salesforce Integration',
+        name: 'Name',
+        email: 'Email',
+        phone: 'Phone',
+        jobTitle: 'Job title',
+        priority: "priority",
+        High: "High",
+        Medium: "Medium",
+        Low: "Low",
+        Open: "Sent",
+        "Work in progress": "Work in progress",
+        Done:"Done",
+        createInJira: "Create task in jira",
+        jiraTasks: 'Jira Tasks',
+        createTask: 'Create Task',
+        newTaskJira: 'New Task',
+        noJiraTasks: "No tasks yet."
     }
 }
 
@@ -287,7 +307,27 @@ export const uz = {
         isInUse: 'Allaqachon ishlatilmoqda',
         minTwoOptions: 'Iltimos kamida 2 ta javob kiriting',
         yes: 'xa',
-        no: 'yo\'q'
+        no: 'yo\'q',
+        nameRequired: 'Ism yozilishi shart!',
+        emailRequired: 'Email yozilishi shart!',
+        notValidPhone: 'Telefon raqam noto\'g\'ri kiritildi',
+        salesforceIntegration: 'Salesforce integratsiyasi',
+        name: 'Ism',
+        email: 'Email',
+        phone: 'Telefon',
+        jobTitle: 'Lavozim',
+        priority: "Ustuvorligi",
+        High: "Baland",
+        Medium: "O\'rta",
+        Low: "Past",
+        Open: "Jo'natildi",
+        "Work in progress": "Jarayonda...",
+        Done:"Bajarildi",
+        createInJira: "Jirada topshiriq yarating",
+        jiraTasks: 'Jira topshiriqlari',
+        createTask: 'Topshiriq yarating',
+        newTaskJira: 'Yangi topshiriq',
+        noJiraTasks: "Topshiriqlar mavjud emas."
     }
 }
 

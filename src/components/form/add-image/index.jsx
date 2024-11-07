@@ -48,7 +48,7 @@ const AddImage=({image, setImage}) =>{
                                 <img className='' src={image['data_url']}/>
                                 <div className="">
                                     <button className='btn btn-main mx-1 mt-2' onClick={() => onImageUpdate(index)}>{t('update')}</button>
-                                    <button className='btn btn-main mx-1 mt-2' onClick={() => onImageRemove(index)}>{t('remove')}</button>
+                                    <button className='btn btn-danger mx-1 mt-2' onClick={() => onImageRemove(index)}>{t('remove')}</button>
                                 </div>
                             </div>
                         ))}

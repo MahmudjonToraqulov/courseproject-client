@@ -15,9 +15,9 @@ const FormCardItem = ({form, editable=false, handleEdit, handleDelete, adminRole
 
     return (
         <div
-            className="box-bg-theme p-3 rounded my-2">
+            className="box-bg-theme box-shadow p-3 rounded my-2">
             <Link to={`/forms/${form.id}`}
-                  className="text-main fs-3 my-2">{form.title}</Link>
+                  className="text-primary fs-3 my-2">{form.title}</Link>
 
             {!editable || adminRole ?
                 <p className="fs-6 text-muted">{t('author')}: {form.user?.name}</p> : null

@@ -27,9 +27,9 @@ const FilledFormPage = () => {
                 </div>
                 <div className="">
                     {answers.items.map(item => (
-                        <div key={item.id} className="p-4 border border-gray-200 rounded-md bg-gray-50">
-                            <h3 className="text-lg font-medium text-gray-700">{t('question')}: {item.question}</h3>
-                            <p className="text-gray-600">{t('answer')}: {item.answer}</p>
+                        <div key={item.id} className="p-4 border ">
+                            <h3 className="">{t('question')}: {item.question}</h3>
+                            <p className="">{t('answer')}: {item.answer}</p>
                         </div>
                     ))}
                 </div>
